@@ -1,0 +1,16 @@
+
+name: Test Self-hosted Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+    steps:
+      - name: Check Ubuntu runner
+        run: |
+          echo "Hello from hqdu"
+          hostname
+          pwd
+          ls -la
